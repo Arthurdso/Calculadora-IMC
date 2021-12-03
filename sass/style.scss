@@ -25,5 +25,59 @@ body {
 		padding: 1em;
 		box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
 		background-color:$background;
+
+		@media (min-width: 500px) {
+			
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 500px;
+			width: 100%;
+			padding: 1em;
+		}
+		
+		h1 {
+			text-align: center;
+			font-size: 2em;
+			text-decoration: underline;
+		}	
+	}
+
+	.form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 0.3em;
+
+		label, button {
+			margin-top: 1em;
+		}
+
+		input, button {
+			font-size: inherit;
+			font-family: inherit;
+			width: 100%;
+			padding: 0.5em;
+		}
+
+		button {
+			background-color: #fbefff;
+			cursor: pointer;
+			border-radius: 0.3em;
+			width: 50%;
+
+			&:hover {
+				filter: opacy(0.8);
+				color: lightseagreen;
+			}
+
+			&:active {
+				background-color: #FFefff;
+				color: #000;
+				filter: opacity(0.8);
+			}
+		}
 	}
 }
+

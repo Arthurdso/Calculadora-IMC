@@ -19,5 +19,42 @@ body {
     padding: 1em;
     box-shadow: 6px 6px 20px gray, -6px -6px 20px white;
     background-color: #DFDB85; }
+    @media (min-width: 500px) {
+      .main .calc-imc {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 500px;
+        width: 100%;
+        padding: 1em; } }
+    .main .calc-imc h1 {
+      text-align: center;
+      font-size: 2em;
+      text-decoration: underline; }
+  .main .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.3em; }
+    .main .form label, .main .form button {
+      margin-top: 1em; }
+    .main .form input, .main .form button {
+      font-size: inherit;
+      font-family: inherit;
+      width: 100%;
+      padding: 0.5em; }
+    .main .form button {
+      background-color: #fbefff;
+      cursor: pointer;
+      border-radius: 0.3em;
+      width: 50%; }
+      .main .form button:hover {
+        filter: opacy(0.8);
+        color: lightseagreen; }
+      .main .form button:active {
+        background-color: #FFefff;
+        color: #000;
+        filter: opacity(0.8); }
 
 /*# sourceMappingURL=style.css.map */
