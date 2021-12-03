@@ -1,29 +1,33 @@
-function validaENtrada(args) {
-    for (var i = 0; i < arguments.length; i++) {
-        if (!!arguments[i] == false || arguments[i] <0) {
-            return false;
-        }
-    }
-    return true;
-}
-
-function calcularIMC(kilos, altura) {
+function calcularIMC (kilos, altura) {
     altura = altura /100;
     return (kilos / (altura * altura));
 }
 
-const formCalcularIMC = document.getElementById('form');
+var formCalcularIMC = document.getElementById('form');
 
 formCalcularIMC.addEventListener('submit', function(event){
     event.preventDefault();
 
-    const kilos = parseFloat(document.getElementById('kilos').value);
-    const altura = parseFloat(document.getElementById('altura').value);
-
-    if (validaENtrada(kilos, altura)) {
-        const imc = calcularIMC(kilos, altura);
-        document.getElementById('imc').value = parseInt(imc).toFixed(2);
-    } else {
-        document.getElementById('imc').value = "### ERRO ###";
+    var kilos = parseFloat(document.getElementById('kilos').value);
+    var altura = parseFloat(document.getElementById('altura').value);
+    var imc = calcularIMC(kilos, altura);
+    document.getElementById('imc').value = parseInt(imc).toFixed(2); 
+    
+    if (imc <= 17) {
+        alert('Você está muito abaixo do peso');
     }
+
+    if (imc > 17 && imc <=18.49){
+        alert('Você está abaixo do peso');
+    }
+    if (imc >=18.5  && imc <= 24.99) {
+        alert('Você está com o peso normal');
+    }
+    if (imc = 25 && imc <= 29.99) {
+        alert ('Você está acima do peso');
+    }
+    if (imc = 30 && imc <=34.99);{
+        alert ('Você está com obsidade nivel 1');
+    }
+    if (imc = 35 && imc <=39.99)
 });

@@ -56,5 +56,12 @@ body {
         background-color: #FFefff;
         color: #000;
         filter: opacity(0.8); }
+  .main .referencia-imc {
+    padding-left: 1em;
+    padding-bottom: 3em;
+    padding-top: 3em;
+    padding-right: 1em; }
+    .main .referencia-imc p {
+      padding-bottom: 1em; }
 
 /*# sourceMappingURL=style.css.map */
